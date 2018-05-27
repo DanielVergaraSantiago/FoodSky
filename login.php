@@ -25,7 +25,12 @@
     }
 
     if ($c > 0) {
+      
+      session_start();
+      $_SESSION["user"] = $_POST["email"];
+
       header('Location: inicio.php');
+
     }else {
       header('Location: login.html');
     }

@@ -27,13 +27,11 @@
 
     <?php
 
-#      session_start();
-#
-#      if (!isset($_SESSION["user"])) {
-#        header("location:login.php");
-#      }
+      session_start();
 
-#      require("tmp2.php");
+      if (!isset($_SESSION["user"])) {
+        header("location:login.html");
+      }
 
     ?>
 
@@ -46,7 +44,7 @@
         <div class="navbar-nav">
           <a class="nav-item nav-link mr-5" href="inicio.php">For me</a>
           <a class="nav-item nav-link mr-5" href="AboutUs.html">About us</a>
-          <a class="nav-item nav-link mr-5 active" style="font-size: 1.4rem" href="prubea.php">FoodSky<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link mr-5 active" style="font-size: 1.4rem" href="prueba.html">FoodSky<span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link mr-5" href="#today">Today</a>
           <a class="nav-item nav-link mr-5" href="cerrar_sesion.php">Sign out</a>
         </div>
