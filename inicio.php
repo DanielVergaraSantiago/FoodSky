@@ -1,3 +1,5 @@
+<?php require 'obtener_recetas.php'; ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -32,6 +34,10 @@
       if (!isset($_SESSION["user"])) {
         header("location:login.html");
       }
+
+      $x = getdate();
+      #echo "fecha: " . $x["wday"];
+      $x = $x["wday"];
 
     ?>
 
@@ -91,27 +97,20 @@
     </div>
 
     <section class="section-100" id="today">
-
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xs-12 col-md-7 subsection h5">
-            <a href="#"><p class="text-right"><i style="color: yellow;" class="material-icons">stars</i></p></a>
-            <h5 class="h3">Fusce pulvinar nisl</h5>
-            <p class="font-weight-normal">Nunc leo leo, laoreet ut fringilla ac, condimentum eleifend nisi. Praesent tristique, libero id varius aliquet, ligula turpis dapibus urna, vulputate mattis lectus erat eget quam. Nulla viverra purus ut tempor porttitor. Donec molestie ligula ac justo volutpat, a venenatis enim hendrerit. Quisque at tellus tristique augue malesuada fermentum. Ut ac ullamcorper lacus, eu consequat tellus. Sed viverra nec tellus a dignissim. Etiam vestibulum accumsan volutpat. Integer facilisis nisl nec dictum cursus. Nunc vehicula arcu et odio mattis pharetra.</p>
-            <ul class="list-unstyled">
-              <li>- Lorem ipsum dolor sit amet</li>
-              <li>- Consectetur adipiscing elit</li>
-              <li>- Integer molestie lorem at massa</li>
-              <li>- Facilisis in pretium nisl aliquet</li>
-              <li>- Faucibus porta lacus fringilla vel</li>
-              <li>- Aenean sit amet erat nunc</li>
-              <li>- Eget porttitor lorem</li>
-            </ul>
+          <div class="col-md-7 subsection h5">
+            <!--<a href="#"><p class="text-right"><i style="color: yellow;" class="material-icons">stars</i></p></a>-->
+            <h5 class="h3"><?php echo $recetas[$x+1][1]; ?></h5>
+            <p class="font-weight-normal"><?php echo $recetas[$x+1][2]; ?></p>
+            <p class="font-weight-normal"><?php echo nl2br($recetas[$x+1][3]); ?></p>
+            <p class="font-weight-normal"><?php echo nl2br($recetas[$x+1][4]); ?></p>
           </div>
-          <div class="col-xs-12 col-md-5">
-            <img src="Recursos/comida/carne.jpg" class="img-fluid img-dia" alt="Responsive image">
+          <div class="col-md-5">
+            <img src="img/<?php echo $recetas[$x+1][5]; ?>" class="img-fluid" alt="Responsive image">
           </div>
         </div>
+      </div>
       </div>
 
     </section>
@@ -119,22 +118,15 @@
     <section class="section-200">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-5">
-            <img src="Recursos/comida/cupcake.jpg" class="img-fluid" alt="Responsive image">
-          </div>
           <div class="col-md-7 subsection h5">
-            <a href="#"><p class="text-right"><i style="color: yellow;" class="material-icons">stars</i></p></a>
-            <h5 class="h3">Fusce pulvinar nisl</h5>
-            <p class="font-weight-normal">Nunc leo leo, laoreet ut fringilla ac, condimentum eleifend nisi. Praesent tristique, libero id varius aliquet, ligula turpis dapibus urna, vulputate mattis lectus erat eget quam. Nulla viverra purus ut tempor porttitor. Donec molestie ligula ac justo volutpat, a venenatis enim hendrerit. Quisque at tellus tristique augue malesuada fermentum. Ut ac ullamcorper lacus, eu consequat tellus. Sed viverra nec tellus a dignissim. Etiam vestibulum accumsan volutpat. Integer facilisis nisl nec dictum cursus. Nunc vehicula arcu et odio mattis pharetra.</p>
-            <ul class="list-unstyled">
-              <li>- Lorem ipsum dolor sit amet</li>
-              <li>- Consectetur adipiscing elit</li>
-              <li>- Integer molestie lorem at massa</li>
-              <li>- Facilisis in pretium nisl aliquet</li>
-              <li>- Faucibus porta lacus fringilla vel</li>
-              <li>- Aenean sit amet erat nunc</li>
-              <li>- Eget porttitor lorem</li>
-            </ul>
+            <!--<a href="#"><p class="text-right"><i style="color: yellow;" class="material-icons">stars</i></p></a>-->
+            <h5 class="h3"><?php echo $recetas[$x+2][1]; ?></h5>
+            <p class="font-weight-normal"><?php echo nl2br($recetas[$x+2][2]); ?></p>
+            <p class="font-weight-normal"><?php echo nl2br($recetas[$x+2][3]); ?></p>
+            <p class="font-weight-normal"><?php echo nl2br($recetas[$x+2][4]); ?></p>
+          </div>
+          <div class="col-md-5">
+            <img src="img/<?php echo $recetas[$x+2][5]; ?>" class="img-fluid" alt="Responsive image">
           </div>
         </div>
       </div>
@@ -144,25 +136,19 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-7 subsection h5">
-            <a href="#"><p class="text-right"><i style="color: yellow;" class="material-icons">stars</i></p></a>
-            <h5 class="h3">Fusce pulvinar nisl</h5>
-            <p class="font-weight-normal">Nunc leo leo, laoreet ut fringilla ac, condimentum eleifend nisi. Praesent tristique, libero id varius aliquet, ligula turpis dapibus urna, vulputate mattis lectus erat eget quam. Nulla viverra purus ut tempor porttitor. Donec molestie ligula ac justo volutpat, a venenatis enim hendrerit. Quisque at tellus tristique augue malesuada fermentum. Ut ac ullamcorper lacus, eu consequat tellus. Sed viverra nec tellus a dignissim. Etiam vestibulum accumsan volutpat. Integer facilisis nisl nec dictum cursus. Nunc vehicula arcu et odio mattis pharetra.</p>
-            <ul class="list-unstyled">
-              <li>- Lorem ipsum dolor sit amet</li>
-              <li>- Consectetur adipiscing elit</li>
-              <li>- Integer molestie lorem at massa</li>
-              <li>- Facilisis in pretium nisl aliquet</li>
-              <li>- Faucibus porta lacus fringilla vel</li>
-              <li>- Aenean sit amet erat nunc</li>
-              <li>- Eget porttitor lorem</li>
-            </ul>
+            <!--<a href="#"><p class="text-right"><i style="color: yellow;" class="material-icons">stars</i></p></a>-->
+            <h5 class="h3"><?php echo $recetas[$x][1]; ?></h5>
+            <p class="font-weight-normal"><?php echo $recetas[$x][2]; ?></p>
+            <p class="font-weight-normal"><?php echo nl2br($recetas[$x][3]); ?></p>
+            <p class="font-weight-normal"><?php echo nl2br($recetas[$x][4]); ?></p>
           </div>
           <div class="col-md-5">
-            <img src="Recursos/comida/pizza.jpg" class="img-fluid" alt="Responsive image">
+            <img src="img/<?php echo $recetas[$x][5]; ?>" class="img-fluid" alt="Responsive image">
           </div>
         </div>
       </div>
     </section>
+
 
 
     <!-- Optional JavaScript -->
