@@ -28,6 +28,7 @@
 		echo "Registro insertado";
 
 		$resultado->closeCursor();
+    header('Location: login.html');
 
 	}catch(Exception $e){
 
