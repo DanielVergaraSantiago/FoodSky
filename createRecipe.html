@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Create recipe</title>
+
+    <link rel="shortcut icon" href="Recursos/food.png">
+
+  </head>
+
+  <body class="cover">
+
+    <nav class="navbar navbar-expand-lg bg-darkBlue sticky-top">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link mr-5" href="#">Galerie</a>
+          <a class="nav-item nav-link mr-5" href="#">About us</a>
+          <a class="nav-item nav-link mr-5 active" style="font-size: 1.4rem" href="#">FoodSky<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link mr-5" href="#">Sign up</a>
+          <a class="nav-item nav-link mr-5" href="#">Sign in</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="text-center row sgi">
+
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4 difuminadoLightBlue">
+
+          <form class="form-signin" action="subir_receta.php" method="post" enctype="multipart/form-data">
+            <img class="mb-4 imgRound" src="Recursos/blanco.png" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal" style="color: #384259;">Create Recipe</h1>
+
+            <label for="inputName" class="sr-only">Name</label>
+            <input type="text" id="inputName" name="name" class="form-control" placeholder="Name" required autofocus>
+            <br>
+            <label for="inputIngredients" class="sr-only">Ingredients</label>
+            <input type="text" id="inputIngredients" name="ingredients" class="form-control" placeholder="Ingredients" required>
+            <br>
+            <textarea class="form-control" rows="3" name="review" placeholder="Review" required=""></textarea>
+            <!--<label for="inputReview" class="sr-only">Review</label>
+            <input type="text" id="inputReview" name="review" class="form-control" placeholder="Review" required>-->
+            <br>
+            <label for="inputPreparation" class="sr-only">  <p>Preparation</p></label>
+            <input type="text" id="inputPreparation" name="preparation" class="form-control" placeholder="preparation" required>
+
+            <label for="imagen"></label>
+            <br>
+            <input type="file" name="imagen" id="imagen">
+            <br><br>
+            <button class="btn btn-lg btn-danger btn-block bg-Red" name="button" type="submit" style="color: #C4EDDE;">Create Recipe</button>
+            <br>
+          </form>
+
+        </div>
+
+        <div class="col-md-4"></div>
+
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  </body>
+</html>

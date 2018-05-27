@@ -1,0 +1,133 @@
+
+body{
+		font-family: 'Lobster', cursive;
+	}
+
+
+.cover{
+	background: url('Recursos/BackgroundComida-1920x1080.jpg') no-repeat center center fixed;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    background-size: cover;
+	    -o-background-size: cover;
+}
+
+h1{
+	color: #F73859;
+}
+
+.titlePrincipal{
+	font-size: 1.5rem;
+}
+
+.bg-darkBlue{
+	background-color: #384259;
+	font-size: 110%;
+}
+
+.text-darkBlue{
+	color: #384259;
+}
+
+.text-LightBlue{
+	color: #C4EDDE;
+}
+
+.text-card{
+	font-size: 1.2rem;
+}
+
+.bg-Red{
+	background-color: #F73859;
+}
+
+.nav-link{
+	color: #C4EDDE;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.difuminadoBlue{
+	background-color: rgba(122, 199, 196, 0.95);
+}
+
+.difuminadoLightBlue{
+	background-color: rgba(196, 237, 222, 0.6);
+}
+
+.imgRound{
+	border-radius: 50%;
+}
+
+
+
+.sgi{
+	display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.avatar{
+  max-height: 300px;
+  max-width: 300px;
+  border-radius: 50%;
+}
+
+.opiniones{
+  padding-top: 100px;
+  margin-top: 10%;
+}
+
+.op{
+  max-width: 290px;
+}
+
+.container-index{
+  background-color: #C4EDDE;
+}
+
+.img-carousel{
+  max-height: 630px;
+}
+
+.img-dia{
+  max-height: 600px;
+}
