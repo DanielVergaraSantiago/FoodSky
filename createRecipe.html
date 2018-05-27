@@ -41,7 +41,7 @@
 
         <div class="col-md-4 difuminadoLightBlue">
 
-          <form class="form-signin" action="subir_receta.php" method="post" enctype="multipart/form-data">
+          <form class="form-signin" action="enviarReceta.php" method="post" enctype="multipart/form-data">
             <img class="mb-4 imgRound" src="Recursos/blanco.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal" style="color: #384259;">Create Recipe</h1>
 
@@ -57,10 +57,12 @@
             <br>
             <label for="inputPreparation" class="sr-only">  <p>Preparation</p></label>
             <input type="text" id="inputPreparation" name="preparation" class="form-control" placeholder="preparation" required>
-
+            <br>
+            <label for="inputType" class="sr-only"> # of Type </label>
+            <input type="text" id="inputType" class="form-control" placeholder="# of type" name="type"></input>
             <label for="imagen"></label>
             <br>
-            <input type="file" name="imagen" id="imagen">
+            <input type="file" name="image" id="imagen">
             <br><br>
             <button class="btn btn-lg btn-danger btn-block bg-Red" name="button" type="submit" style="color: #C4EDDE;">Create Recipe</button>
             <br>
