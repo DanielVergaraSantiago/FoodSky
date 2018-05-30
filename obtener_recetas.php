@@ -1,5 +1,11 @@
 <?php
 
+  session_start();
+
+  if (!isset($_SESSION["user"])) {
+    header("location:login.html");
+  }
+
   $conexion = mysqli_connect("localhost", "root", "12345678");
   if (mysqli_connect_errno()) {
     echo "fallo";
@@ -9,19 +15,19 @@
   mysqli_select_db($conexion, "food") or die ("no se encontro");
   mysqli_set_charset($conexion, "utf8");
 
-  $sql = "SELECT * FROM recipe";
 
-  /*$mm = 0;
-  $aa = $_SESSION["user"];
-  echo $aa;
-  $consulta = "SELECT type FROM usuarios_contrasena WHERE email='$aa'";
-  $resultado_consulta = mysqli_query($conexion, $consulta);
-  while ($fila1 = mysqli_fetch_array($resultado_consulta)) {
-    $mm++;
-    echo "jkj";
-    echo "$fila1";
-  }*/
+  $email = $_SESSION["user"];
+  $sql_email = "SELECT * FROM usuarios_contrasena where email= '$email'";
+  $resultado_email = mysqli_query($conexion, $sql_email);
+  while ($row = mysqli_fetch_array($resultado_email)) {
+    $type = $row[0];
+  }
 
+  if ($type == 1) {
+    $sql = "SELECT * FROM recipe_milk";
+  }else {
+    $sql = "SELECT * FROM recipe";
+  }
 
   $resultado = mysqli_query($conexion, $sql);
 
@@ -45,6 +51,6 @@
     #echo $recetas[1][0];
   }
   #echo "<br>" . $recetas[0][1];
-
+  /*echo $_SESSION["user"];*/
 
  ?>
